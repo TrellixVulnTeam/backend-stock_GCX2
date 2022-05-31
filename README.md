@@ -1,10 +1,5 @@
 # Backend Inventory Control
 
-### Dependencies
-- Express
-- Sequelize
-- Sqlite3
-
 ### Install
 ```bash
 $ npm install express
