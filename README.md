@@ -1,10 +1,17 @@
 # Backend Inventory Control
 
 ## Dependencies
-- Node
 - Express
 - Sequelize
 - Sqlite3
+
+## Install
+```bash
+$ npm install express
+$ npm i sequelize
+$ npm i sqlite3
+$ npm install -g nodemon
+```
 
 ## Available Scripts
 
