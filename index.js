@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 3005;
 const produtoRouter = require("./routes/produtoRouter");
 const database = require('./config/db');
@@ -16,6 +17,7 @@ const modelSynchronization = async () => {
 }
 modelSynchronization();
 
+app.use(cors());
 app.use(express.json());
 app.use(produtoRouter);
 

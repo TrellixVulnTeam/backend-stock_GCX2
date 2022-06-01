@@ -113,20 +113,16 @@ const createProduct = async (req, res) => {
     try {
         let findName = await Produto.findOne({ where: { nome } })
         if (!findName) {
-            const newProduto = await Produto.create({
+            await Produto.create({
                 nome: nome,
                 descricao: descricao,
                 preco: preco,
                 quantidade: quantidade,
             })
-            const message = {
-                message: "Created successful",
-                data: newProduto
-            }
-            return res.status(200).json(message);
+            return res.status(200).json("Created successful");
         }
         else {
-            return res.status(400).json("Product name already exists");
+            return res.status(400).json("Product name already exists no DB");
         }
     } catch (error) {
         console.log(error);
